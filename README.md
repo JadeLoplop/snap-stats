@@ -1,33 +1,36 @@
-# Clone the Repository
+# Snap Stats
+
+## Local Development Setup
+
+Follow these steps to set up the Snap Stats project locally:
+
+```bash
 git clone https://github.com/JadeLoplop/snap-stats
-
-# Navigate to the Project Directory
 cd snap-stats
-
-# Install Dependencies
 composer install
-
-# Create a Copy of the Environment File
 cp .env.example .env
-
-# Generate an Application Key
 php artisan key:generate
 
-# Configure the Database
-# Open the .env file in a text editor and set up your database connection details
-# Example:
-# DB_CONNECTION=mysql
-# DB_HOST=your_database_host
-# DB_PORT=your_database_port
-# DB_DATABASE=your_database_name
-# DB_USERNAME=your_database_username
-# DB_PASSWORD=your_database_password
+```
+Open the .env file in a text editor and set up your database connection details:
 
-# Run Migrations
-php artisan migrate
+```bash
+DB_CONNECTION=mysql
+DB_HOST=your_database_host
+DB_PORT=your_database_port
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+```
+Next the seeder
+```bash
+php artisan db:seed
+```
 
-# Seed the Database (Optional)
-# php artisan db:seed
-
-# Run the Application
+Run project and vite
+```bash
 php artisan serve
+npm run dev
+```
+
+This will launch the application, and you can access it by visiting http://localhost:8000 in your web browser.
